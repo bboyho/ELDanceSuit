@@ -1,4 +1,4 @@
-# ELSuit
+# EL Dance Suit
 
 This code will be used to wirelessly control 2x 3meters of EL Wire attached to a dancer's hoodie and pants
 for a performance with Streetside Studio's bboys/bgirls.
