@@ -43,6 +43,7 @@
 
 //Declare character 'val'
 char val;
+char temp_delete;
 
 const int status_LED = 13;
 
@@ -123,12 +124,18 @@ void loop() {
   delay(50);
   digitalWrite(3, HIGH); //Channel B
 
-  if (counter > 50) {
-    XBee_sent == false;
+  if (counter >= 10) {
+    if (XBee_sent == true) {
+      Serial.println("Counter = 10, we are ready to receive characters again");
+    }
+    XBee_sent = false;
   }
 
   if (XBee_sent == true) {
-    counter = ++counter;//keep adding until reach 100, then we can reset flag and beging receiving again
+    counter = ++counter;//keep adding until reach 100, then we can reset flag and beging receiving again\
+    Serial.print("Counter = ");
+    Serial.println(counter);
+    temp_delete = Serial.read();//try to clear false triggers in buffer provided by XBee until counter resets
   }
 
 }
