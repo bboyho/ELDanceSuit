@@ -6,7 +6,7 @@ for a performance with Streetside Studio's bboys/bgirls.
 Repository Contents
 -------------------
 **<> Code**
-- /[XBee_ELSequencer](https://github.com/bboyho/ELDanceSuit/blob/master/Arduino/EL_XBeeWirelessControl/XBee_ELSequencer/XBee_ELSequencer.ino)
+- /[XBee_ELSequencer](https://github.com/bboyho/ELDanceSuit/tree/master/Arduino/EL_XBeeWirelessControl/XBee_ELSequencer)
 - /[XBee_ELSequencer_Controller](https://github.com/bboyho/ELDanceSuit/tree/master/Arduino/EL_XBeeWirelessControl/XBee_ELSequencer_Controller)
 
 Documentation
