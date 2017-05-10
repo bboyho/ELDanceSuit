@@ -7,7 +7,7 @@ Repository Contents
 -------------------
 **<> Code**
 - /[XBee_ELSequencer](https://github.com/bboyho/ELDanceSuit/blob/master/Arduino/EL_XBeeWirelessControl/XBee_ELSequencer/XBee_ELSequencer.ino)
-- [rXBee_ELSequencer_Controller]()
+- [rXBee_ELSequencer_Controller](https://github.com/bboyho/ELDanceSuit/tree/master/Arduino/EL_XBeeWirelessControl/XBee_ELSequencer_Controller)
 
 Documentation
 -------------------
