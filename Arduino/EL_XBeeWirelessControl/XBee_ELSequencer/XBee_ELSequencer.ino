@@ -1,6 +1,4 @@
 /**********************************************************************
-XBee_ELSequencer.ino
-
  * SparkFun XBee EL Sequencer Demo Sketch
  * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
  * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
@@ -66,15 +64,15 @@ void setup() {
   pinMode(8, OUTPUT); //Set pin mode as output for Channel G
   pinMode(9, OUTPUT); //Set pin mode as output for Channel H
 
-  for(int i = 0; i < 3; i++){
+  for (int i = 0; i < 3; i++) {
     digitalWrite(status_LED, HIGH);//set Status LED on
     delay(50);
     digitalWrite(status_LED, LOW); //set Status LED off
     delay(50);
   }
 
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
+  digitalWrite(2, HIGH); //Channel A
+  digitalWrite(3, HIGH); //Channel B
 
   digitalWrite(4, LOW); //Channel C
   digitalWrite(5, LOW); //Channel D
@@ -97,13 +95,22 @@ void loop() {
 
     //Check to see if character sent is letter A
     if (val == 'A') {
-      digitalWrite(13, HIGH); //turn ON Status LED
-      delay(50);
+      digitalWrite(status_LED, LOW); //turn ON Status LED
+      digitalWrite(2, LOW); //Channel A
+      digitalWrite(3, LOW); //Channel B
+      delay(1000);
       Serial.println("Character Received");
     }
 
     else {
-      digitalWrite(13, LOW); //turn OFF Status LED
+      //rewrote controller code to stop constantly sending Z
+      //toggled pins outside of this nested condition statement
     }
   }
+
+  digitalWrite(status_LED, HIGH); //turn OFF Status LED
+
+  digitalWrite(2, HIGH); //Channel A
+  delay(50);
+  digitalWrite(3, HIGH); //Channel B
 }
