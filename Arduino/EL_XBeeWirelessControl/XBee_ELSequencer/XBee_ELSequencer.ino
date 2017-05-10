@@ -1,4 +1,6 @@
 /**********************************************************************
+XBee_ELSequencer.ino
+
  * SparkFun XBee EL Sequencer Demo Sketch
  * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
  * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
