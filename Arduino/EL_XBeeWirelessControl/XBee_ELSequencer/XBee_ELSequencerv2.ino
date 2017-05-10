@@ -104,14 +104,14 @@ void loop() {
         digitalWrite(status_LED, LOW); //turn ON Status LED
         digitalWrite(2, LOW); //Channel A
         digitalWrite(3, LOW); //Channel B
-        delay(1000);
+        delay(250);
         Serial.println("Character Received");
 
 
         digitalWrite(status_LED, HIGH); //turn on Status LED
 
         digitalWrite(2, HIGH); //Channel A
-        delay(100);
+        delay(150);
         digitalWrite(3, HIGH); //Channel B
 
         counter = 0;
