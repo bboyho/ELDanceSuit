@@ -132,7 +132,7 @@ void loop() {
   }
 
   if (XBee_sent == true) {
-    counter = ++counter;//keep adding until reach 100, then we can reset flag and beging receiving again\
+    counter = ++counter;//keep adding until reach 10, then we can reset flag and beging receiving again\
     Serial.print("Counter = ");
     Serial.println(counter);
     temp_delete = Serial.read();//try to clear false triggers in buffer provided by XBee until counter resets
