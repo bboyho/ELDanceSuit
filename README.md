@@ -3,6 +3,12 @@
 This code will be used to wirelessly control 2x 3meters of EL Wire attached to a dancer's hoodie and pants
 for a performance with Streetside Studio's bboys/bgirls.
 
+Documentation
+-------------------
+* [EL Sequencer Hookup Guide](https://learn.sparkfun.com/tutorials/el-sequencerescudo-dos-hookup-guide)
+* [GitHub Repository for EL Sequencer](https://github.com/sparkfun/EL_Sequencer/tree/master)
+
+
 License Information
 -------------------
 
