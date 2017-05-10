@@ -12,7 +12,7 @@ Repository Contents
 Documentation
 -------------------
 
-* [EL Sequencer Hookup Guide](https://learn.sparkfun.com/tutorials/el-sequencerescudo-dos-hookup-guide)
+* [SparkFun EL Sequencer Hookup Guide](https://learn.sparkfun.com/tutorials/el-sequencerescudo-dos-hookup-guide)
 * [GitHub Repository for EL Sequencer](https://github.com/sparkfun/EL_Sequencer/tree/master)
 
 
