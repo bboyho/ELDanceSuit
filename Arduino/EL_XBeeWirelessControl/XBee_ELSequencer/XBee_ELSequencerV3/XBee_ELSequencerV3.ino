@@ -76,7 +76,7 @@ void setup() {
   pinMode(8, OUTPUT); //Set pin mode as output for Channel G
   pinMode(9, OUTPUT); //Set pin mode as output for Channel H
 
-  for (int i = 0; i < 3; i++) {
+  for (int i = 0; i < 3; ++i) {
     digitalWrite(status_LED, HIGH);//set Status LED on
     delay(50);
     digitalWrite(status_LED, LOW); //set Status LED off
@@ -107,7 +107,7 @@ void loop() {
         //testing area
         Seq_1();
 
-        
+
       }
       else if (val == 'B') {
         Seq_1();
@@ -168,6 +168,22 @@ void all_ON() {
   //Madi, Henry
   digitalWrite(8, HIGH); //Channel G, hoodie
   digitalWrite(9, HIGH); //Channel H, pants
+}
+
+
+void all_OFF() {
+  //Bobby
+  digitalWrite(2, LOW); //Channel A, hoodie
+  digitalWrite(3, LOW); //Channel B, pants
+  //Antuan, Kaden
+  digitalWrite(4, LOW); //Channel C, hoodie
+  digitalWrite(5, LOW); //Channel D, pants
+  //Mireku, Talon
+  digitalWrite(6, LOW); //Channel E, hoodie
+  digitalWrite(7, LOW); //Channel F, pants
+  //Madi, Henry
+  digitalWrite(8, LOW); //Channel G, hoodie
+  digitalWrite(9, LOW); //Channel H, pants
 }
 
 void Seq_0() {
@@ -231,10 +247,46 @@ void Seq_0() {
 
 void Seq_1() {
 
+  for (int i = 0; i < 8; ++i) {
+    //Bobby
+    digitalWrite(2, HIGH); //Channel A, hoodie
+    digitalWrite(3, LOW); //Channel B, pants
+    //Antuan, Kaden
+    digitalWrite(4, HIGH); //Channel C, hoodie
+    digitalWrite(5, LOW); //Channel D, pants
+    //Mireku, Talon
+    digitalWrite(6, LOW); //Channel E, hoodie
+    digitalWrite(7, HIGH); //Channel F, pants
+    //Madi, Henry
+    digitalWrite(8, LOW); //Channel G, hoodie
+    digitalWrite(9, HIGH); //Channel H, pants
+    delay(250);
+
+    //Bobby
+    digitalWrite(2, LOW); //Channel A, hoodie
+    digitalWrite(3, HIGH); //Channel B, pants
+    //Antuan, Kaden
+    digitalWrite(4, LOW); //Channel C, hoodie
+    digitalWrite(5, HIGH); //Channel D, pants
+    //Mireku, Talon
+    digitalWrite(6, HIGH); //Channel E, hoodie
+    digitalWrite(7, LOW); //Channel F, pants
+    //Madi, Henry
+    digitalWrite(8, HIGH); //Channel G, hoodie
+    digitalWrite(9, LOW); //Channel H, pants
+    delay(250);
+  }
+
+  all_ON();
+  delay(750);
+  all_OFF();
+  delay(100);
+  all_ON();
+
 }
 
 void Seq_2() {
-
+  all_ON();
 }
 
 void Seq_3() {
