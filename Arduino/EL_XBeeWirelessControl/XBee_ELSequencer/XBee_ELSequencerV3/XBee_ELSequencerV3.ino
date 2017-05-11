@@ -105,7 +105,7 @@ void loop() {
         //Seq_0();
 
         //testing area
-        Seq_1();
+        Seq_3();
 
 
       }
@@ -291,10 +291,46 @@ void Seq_2() {
 
 void Seq_3() {
 
+  all_OFF();
+  delay(100);
+  //Madi, Henry
+  digitalWrite(8, HIGH); //Channel G, hoodie
+  digitalWrite(9, LOW); //Channel H, pants
+  delay(100);
+  //Antuan, Kaden
+  digitalWrite(4, HIGH); //Channel C, hoodie
+  digitalWrite(5, LOW); //Channel D, pants
+  delay(100);
+  //Bobby
+  digitalWrite(2, HIGH); //Channel A, hoodie
+  digitalWrite(3, LOW); //Channel B, pants
+
+  //Mireku, Talon
+  digitalWrite(6, HIGH); //Channel E, hoodie
+  digitalWrite(7, LOW); //Channel F, pants
+  delay(100);
+
+  //Madi, Henry
+  digitalWrite(8, HIGH); //Channel G, hoodie
+  digitalWrite(9, HIGH); //Channel H, pants
+  delay(100);
+  //Antuan, Kaden
+  digitalWrite(4, HIGH); //Channel C, hoodie
+  digitalWrite(5, HIGH); //Channel D, pants
+  delay(100);
+  //Bobby
+  digitalWrite(2, HIGH); //Channel A, hoodie
+  digitalWrite(3, HIGH); //Channel B, pants
+
+  //Mireku, Talon
+  digitalWrite(6, HIGH); //Channel E, hoodie
+  digitalWrite(7, HIGH); //Channel F, pants
+  delay(100);
+
 }
 
 void Seq_4() {
-
+  all_ON();
 }
 
 void Seq_5() {
