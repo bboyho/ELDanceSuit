@@ -61,9 +61,6 @@ void setup() {
   val = 'C';
   val = 'D';
   val = 'E';
-  val = 'F';
-  val = 'G';
-  val = 'H';
 
   //Initialize pins
   pinMode(status_LED, OUTPUT); //Set pin mode as output for status LED
@@ -97,17 +94,12 @@ void loop() {
       val = Serial.read();
       counter = 0;
       XBee_sent = true;
-      Serial.println("Character Received");
-
+      Serial.print("Character Received = ");
+      Serial.println(val);
 
       //Check to see if character sent is letter A
       if (val == 'A') {
-        //Seq_0();
-
-        //testing area
-        Seq_3();
-
-
+        Seq_0();
       }
       else if (val == 'B') {
         Seq_1();
@@ -121,15 +113,7 @@ void loop() {
       else if (val == 'E') {
         Seq_4();
       }
-      else if (val == 'F') {
-        Seq_5();
-      }
-      else if (val == 'G') {
-        Seq_6();
-      }
-      else if (val == 'H') {
-        Seq_7();
-      }
+
       //else {
       //rewrote controller code to stop constantly sending Z
       //toggled pins outside of this nested condition statement
@@ -243,6 +227,8 @@ void Seq_0() {
   delay(250);
   digitalWrite(2, HIGH); //Channel A
   digitalWrite(3, HIGH); //Channel B
+
+  all_ON();
 }
 
 void Seq_1() {
@@ -331,16 +317,4 @@ void Seq_3() {
 
 void Seq_4() {
   all_ON();
-}
-
-void Seq_5() {
-
-}
-
-void Seq_6() {
-
-}
-
-void Seq_7() {
-
 }
