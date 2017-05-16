@@ -1,23 +1,22 @@
 /*******************************************************************
 XBee_ELSequencer_ControllerV1.ino
-Taken from SparkFun XBee EL Sequencer Controller
+Taken from SparkFun XBee EL Sequencer Controller Example
 Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
 Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
 https://github.com/sparkfun/EL_Sequencer
 
 Description:
-This is a sketch for the EL Sequencer with a wireless controller. 
-The wireless controller consists of a RedBoard Programmed with Arduino,
-XBee Shield, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
-Blue Clear LED, 330Ohm current limiting resistors, and a button. 
-
-Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
-12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
-and a XBee Series 1 transceiver.  An XBee Series 2 can be used but the throughput
-of the Series 1 is much higher. To reduce latency, I recommend using the XBee
-Series 1. The basic configuration of the XBee module with point-to-point configuratin is
-based on Digi's Example tutorial => https://www.digi.com/blog/xbee/basic-xbee-802-15-4-chat/.
-page 5 of the tutorial shows you how to broadcast with
+This is a basic test of the EL Sequencer with a wireless controller.
+The wireless controller consists of an Arduino Uno, XBee Shield,
+XBee Series 1 transceiver, and LED Push Button. The EL Sequencer
+uses an EL component, EL inverter, XBee female sockets soldered,
+battery, and a XBee Series 1 transceiver. An XBee Series 2
+can be used but the throughput of the Series 1 is much higher. To
+reduce latency, I recommend using the XBee Series 1. The basic
+configuration of the XBee module with point-to-point configuratin is
+based on Digi's Example tutorial
+=> http://examples.digi.com/get-started/basic-xbee-802-15-4-chat/ .
+Page 5 of the tutorial shows you how to broadcast with
 point-to-multipoint configuration so that multiple EL Sequencers
 can be controlled.
 
@@ -30,7 +29,13 @@ the EL component on a channel that is associated with that character.
 A LED push button was used but not necessary for this to operate. A
 normal momentary push button can be used.
 
-Using a RedBoard programmed with Arduino, the XBee transceiver is connected to the
+Connect momentary LED tactile push buttons to Arduino:
+     C = pin 13, the cathode (+) of the LED
+     A = GND, the anode (-) of the LED
+     B1 = GND
+     B2 = pin 8
+
+Using a RedBoard Programmed with Arduino, the XBee transceiver is connected to the
 Software Serial pins. By pushing the button, the Arduino will
 send one character through the XBee. Logic is used to control
 how many characters are sent with the push button. The Arduino
@@ -67,7 +72,7 @@ void setup() {
 
   //Declare pin modes
   pinMode(button1Pin, INPUT_PULLUP); //use internal pullup resistor with LED
-  pinMode (ledPin1, OUTPUT);
+  pinMode (ledPin1, OUTPUT);//LED to indicate when character has been sent
 
   //Declare serial connections for debugging
   Serial.begin(9600);
