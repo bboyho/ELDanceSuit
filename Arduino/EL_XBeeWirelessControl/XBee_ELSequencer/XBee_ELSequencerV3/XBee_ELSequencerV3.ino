@@ -9,9 +9,9 @@ XBee_ELSequencerV3.ino
  * This is a modified sketch for the EL Sequencer with a wireless controller.
  * The wireless controller consists of a RedBoard Programmed with Arduino,
  * XBee Explorer, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
- * Blue Clear LED, 330Ohm current limiting resistors, a Button. 
+ * Blue Clear LED, 330Ohm current limiting resistors, and a button. 
  *
- * Each of the 7 EL dance suits contain an EL Sequencer, 2x EL Wires, 
+ * Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
  * 12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
  * and a XBee Series 1 transceiver.  An XBee Series 2 can be used but the throughput
  * of the Series 1 is much higher. To reduce latency, I recommend using the XBee
