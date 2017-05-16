@@ -65,7 +65,7 @@ SoftwareSerial xbee(2, 3); //Rx = 2, Tx = 3
 //Send
 const int button1Pin = 8; //push button
 const int ledPin1 = 13;  //LED on the push button
-
+//variables to check for button1 state
 boolean prev_button1State = false;
 boolean current_button1State = false;
 
