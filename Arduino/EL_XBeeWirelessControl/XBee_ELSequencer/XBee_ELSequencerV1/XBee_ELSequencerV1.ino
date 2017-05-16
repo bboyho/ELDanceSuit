@@ -1,21 +1,23 @@
 /**********************************************************************
 XBee_ELSequencerV1.ino
+Created by Ho Yun Bobby Chan @  SparkFun Electronics May 10th, 2017
+
  * Taken from SparkFun XBee EL Sequencer Demo Sketch
  * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
  * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
  * https://github.com/sparkfun/EL_Sequencer
  *
  * Description:
- * This is a basic test of the EL Sequencer with a wireless controller.
- * The wireless controller consists of an Arduino Uno, XBee Explorer,
+ * This is a basic test of the EL Sequencer to control an EL Sequencer
+ * The wireless controller consists of an RedBoard Programmed with Arduino, XBee Shield,
  * XBee Series 1 transceiver, and LED Push Button. The EL Sequencer
- * uses an EL component, EL inverter, XBee female sockets soldered,
- * battery, and a XBee Series 1 transceiver.  An XBee Series 2
+ * uses an EL wire, 12V EL inverter, a 9V wall wart, 9V adapter, XBee female sockets soldered,
+ * battery, and a XBee Series 1 transceiver. An XBee Series 2
  * can be used but the throughput of the Series 1 is much higher. To
  * reduce latency, I recommend using the XBee Series 1. The basic
  * configuration of the XBee module with point-to-point configuratin is
  * based on Digi's Example tutorial
- * => https://www.digi.com/blog/xbee/basic-xbee-802-15-4-chat/.
+ * => http://examples.digi.com/get-started/basic-xbee-802-15-4-chat/ .
  * Page 5 of the tutorial shows you how to broadcast with
  * point-to-multipoint configuration so that multiple EL Sequencers
  * can be controlled.
