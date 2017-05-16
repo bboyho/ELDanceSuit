@@ -130,7 +130,7 @@ void loop() {
     if (prev_button1State != current_button1State) //check to see if button is still being pressed
     {
       Serial.println("Button is pressed.");
-      xbee.write(send_CHAR);//Tell Sequencer to change to mode
+      xbee.write(send_CHAR);//Tell Sequencer to change mode
     }
     else {
       //do nothing because finger is still on button
