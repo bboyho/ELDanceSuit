@@ -1,6 +1,6 @@
 /**********************************************************************
 XBee_ELSequencerV3.ino
- * SparkFun XBee EL Sequencer Demo Sketch
+ * Taken from the SparkFun XBee EL Sequencer Demo Sketch
  * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
  * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
  * https://github.com/sparkfun/EL_Sequencer
@@ -49,7 +49,7 @@ char temp_delete; //used to delete buffer and prevent falst triggers when Master
 const int status_LED = 13;
 
 int counter = 0; //adding counter to prevent false triggers for a small period of time
-boolean XBee_sent = false; //check to see if we have received any characters after a certain period of time.
+boolean XBee_sent = false; //flag to see if we have received any characters after a certain period of time
 
 /*******************Setup Loop***************************/
 void setup() {
@@ -91,7 +91,7 @@ void loop() {
       val = Serial.read();//save whatever is in the buffer to the variable
       counter = 0;        //set counter to 0 to prevent false button presses
       XBee_sent = true;   //we have received a character
-      
+
       //if debugging, we can see what character is recevied
       Serial.print("Character Received = ");
       Serial.println(val);
@@ -114,20 +114,23 @@ void loop() {
       }
 
     }//end buffer check
-  }//end test for counter
+  }//end check to see if we have received a character after a certain period of time
 
-  if (counter >= 10) {
+  if (counter >= 10) {//this section of code will reset the flag so we can begin listening for characters again
     if (XBee_sent == true) {
       Serial.println("Counter = 10, we are ready to receive characters again");
     }
     XBee_sent = false;
   }
 
-  if (XBee_sent == true) {
-    counter = ++counter;//keep adding until reach 10, then we can reset flag and beging receiving again
+  if (XBee_sent == true) {//this section of code is used as a delay to prevent false button presses
+    counter = ++counter;//keep adding until we reach 10, then we can reset flag and begin receiving again
+
+    //if connected to a computer, check to see the duration of the delay
     Serial.print("Counter = ");
     Serial.println(counter);
-    temp_delete = Serial.read();//try to clear false triggers in buffer provided by XBee until counter resets
+
+    temp_delete = Serial.read();//try to clear false triggers in buffer provided by Master XBee until counter resets
   }
 
 }//end loop()
@@ -135,6 +138,7 @@ void loop() {
 //**********MODULAR SEQUENCED FUNCTIONS**********
 
 void all_ON() {
+  //this function is used to turn all channels ON
   //Bobby
   digitalWrite(2, HIGH); //Channel A, hoodie
   digitalWrite(3, HIGH); //Channel B, pants
@@ -151,6 +155,7 @@ void all_ON() {
 
 
 void all_OFF() {
+  //this function is used to turn all channels OFF
   //Bobby
   digitalWrite(2, LOW); //Channel A, hoodie
   digitalWrite(3, LOW); //Channel B, pants
@@ -166,7 +171,9 @@ void all_OFF() {
 }
 
 void Seq_0() {
-  digitalWrite(status_LED, LOW); //turn ON Status LED
+  //function used to flash Bobby's suit with the beat at 5 seconds into the edited C2C track
+
+  digitalWrite(status_LED, LOW); //turn OFF Status LED
   digitalWrite(2, LOW); //Channel A
   digitalWrite(3, LOW); //Channel B
   delay(500);
@@ -223,10 +230,11 @@ void Seq_0() {
   digitalWrite(2, HIGH); //Channel A
   digitalWrite(3, HIGH); //Channel B
 
-  all_ON();
+  all_ON();//turn everything back on
 }
 
 void Seq_1() {
+  //function used to toggle the channels back & forth and hit the beat at 45 seconds into the edited C2C track
 
   for (int i = 0; i < 8; ++i) {
     //Bobby
@@ -267,10 +275,13 @@ void Seq_1() {
 }
 
 void Seq_2() {
+  //this function turns all the channels ON just in case something happens
+
   all_ON();
 }
 
 void Seq_3() {
+  //function used to as a ripple effect and turn on the channels to the beat scratch at 2 minutes 10 seconds into the edited C2C track
 
   all_OFF();
   delay(100);
@@ -311,5 +322,7 @@ void Seq_3() {
 }
 
 void Seq_4() {
+  //this function turns all the channels ON just in case something happens
+
   all_ON();
 }
