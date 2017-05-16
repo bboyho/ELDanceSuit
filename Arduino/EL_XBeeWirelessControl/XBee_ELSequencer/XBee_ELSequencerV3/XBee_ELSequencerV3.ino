@@ -6,16 +6,17 @@ XBee_ELSequencerV3.ino
  * https://github.com/sparkfun/EL_Sequencer
  *
  * Description:
- * This is a basic test of the EL Sequencer with a wireless controller.
- * The wireless controller consists of an Arduino Uno, XBee Explorer,
- * XBee Series 1 transceiver, and LED Push Button. The EL Sequencer
- * uses an EL component, EL inverter, XBee female sockets soldered,
- * battery, and a XBee Series 1 transceiver.  An XBee Series 2
- * can be used but the throughput of the Series 1 is much higher. To
- * reduce latency, I recommend using the XBee Series 1. The basic
- * configuration of the XBee module with point-to-point configuratin is
- * based on Digi's Example tutorial
- * => https://www.digi.com/blog/xbee/basic-xbee-802-15-4-chat/.
+ * This is a modified sketch for the EL Sequencer with a wireless controller.
+ * The wireless controller consists of a RedBoard Programmed with Arduino,
+ * XBee Explorer, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
+ * Blue Clear LED, 330Ohm current limiting resistors, a Button. 
+ *
+ * Each of the 7 EL dance suits contain an EL Sequencer, 2x EL Wires, 
+ * 12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
+ * and a XBee Series 1 transceiver.  An XBee Series 2 can be used but the throughput
+ * of the Series 1 is much higher. To reduce latency, I recommend using the XBee
+ * Series 1. The basic configuration of the XBee module with point-to-point configuratin is
+ * based on Digi's Example tutorial => https://www.digi.com/blog/xbee/basic-xbee-802-15-4-chat/.
  * Page 5 of the tutorial shows you how to broadcast with
  * point-to-multipoint configuration so that multiple EL Sequencers
  * can be controlled.
@@ -34,7 +35,7 @@ XBee_ELSequencerV3.ino
  * the transceiver.
  *
  * Development environment specifics:
- * Arduino 1.6.3
+ * Arduino 1.6.5
  *
  * This code is beerware; if you see me (or any other SparkFun employee) at the local,
  * and you've found our code helpful, please buy us a round!
@@ -85,7 +86,7 @@ void setup() {
 /*******************Main Loop***************************/
 void loop() {
   if (XBee_sent == false) {
-    //we have not received a character yet after a certain period of time, we can see if the master has sent any characters
+    //we have not received a character yet after a certain period of time, we can see if the Master XBee has sent any characters
     if (Serial.available()) {
       //check if slave XBee is receiving data from master XBee
       val = Serial.read();//save whatever is in the buffer to the variable
@@ -114,9 +115,9 @@ void loop() {
       }
 
     }//end buffer check
-  }//end check to see if we have received a character after a certain period of time
+  }//end check to see if we have not received a character after a certain period of time
 
-  if (counter >= 10) {//this section of code will reset the flag so we can begin listening for characters again
+  if (counter >= 10) {//this section of code will reset the flag "XBee_Sent" so we can begin listening for characters again
     if (XBee_sent == true) {
       Serial.println("Counter = 10, we are ready to receive characters again");
     }
