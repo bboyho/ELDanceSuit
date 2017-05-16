@@ -1,6 +1,5 @@
 /**********************************************************************
 XBee_ELSequencerV1.ino
-
  * Taken from SparkFun XBee EL Sequencer Demo Sketch
  * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
  * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
@@ -46,6 +45,7 @@ XBee_ELSequencerV1.ino
 //Declare character 'val'
 char val;
 
+//LED to check if the LED is initialized.
 const int status_LED = 13;
 
 /*******************Setup Loop***************************/
@@ -66,6 +66,7 @@ void setup() {
   pinMode(8, OUTPUT); //Set pin mode as output for Channel G
   pinMode(9, OUTPUT); //Set pin mode as output for Channel H
 
+  //Status LED to see if the EL Sequencer is initializing  
   for (int i = 0; i < 3; i++) {
     digitalWrite(status_LED, HIGH);//set Status LED on
     delay(50);
