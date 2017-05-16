@@ -1,5 +1,7 @@
 /**********************************************************************
 XBee_ELSequencerV3.ino
+Modified by Ho Yun Bobby Chan @  SparkFun Electronics May 12th, 2017
+
  * Taken from the SparkFun XBee EL Sequencer Demo Sketch
  * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
  * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
@@ -9,7 +11,8 @@ XBee_ELSequencerV3.ino
  * This is a modified sketch for the EL Sequencer with a wireless controller.
  * The wireless controller consists of a RedBoard Programmed with Arduino,
  * XBee Explorer, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
- * Blue Clear LED, 330Ohm current limiting resistors, and a button. 
+ * Blue Clear LED, 330Ohm current limiting resistors, 3x buttons, 
+ * a 9V battery, 9V adapter.
  *
  * Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
  * 12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
@@ -44,7 +47,7 @@ XBee_ELSequencerV3.ino
  ***********************************************************************/
 
 char val; //Declare character 'val' when Slave XBee receives a character
-char temp_delete; //used to delete buffer and prevent falst triggers when Master XBee sends character more than once
+char temp_delete; //used to delete buffer and prevent false triggers when Master XBee sends character more than once
 
 //LED to check if the LED is initialized.
 const int status_LED = 13;
@@ -80,7 +83,7 @@ void setup() {
 
   all_ON();//turn on all EL channels
 
-  delay(100); //Wait 1 second
+  delay(100); //Wait a little
 }
 
 /*******************Main Loop***************************/
