@@ -42,27 +42,21 @@ XBee_ELSequencerV3.ino
  *
  ***********************************************************************/
 
-//Declare character 'val'
-char val;
-char temp_delete;
+char val; //Declare character 'val' when Slave XBee receives a character
+char temp_delete; //used to delete buffer and prevent falst triggers when Master XBee sends character more than once
 
 //LED to check if the LED is initialized.
 const int status_LED = 13;
 
-//adding counter to prevent false triggers for a small period of time
-int counter = 0;
-boolean XBee_sent = false;
+int counter = 0; //adding counter to prevent false triggers for a small period of time
+boolean XBee_sent = false; //check to see if we have received any characters after a certain period of time.
 
 /*******************Setup Loop***************************/
 void setup() {
   Serial.begin(9600); //Begin Serial communication and debugging
   Serial.println("EL Sequencer's XBee is Ready to Receive Characters");
 
-  val = 'A';// button pressed, controller sending  letter A
-  val = 'B';
-  val = 'C';
-  val = 'D';
-  val = 'E';
+  val = 'A'; //save as default character
 
   //Initialize pins
   pinMode(status_LED, OUTPUT); //Set pin mode as output for status LED
@@ -83,7 +77,7 @@ void setup() {
     delay(50);
   }
 
-  all_ON();
+  all_ON();//turn on all EL channels
 
   delay(100); //Wait 1 second
 }
@@ -91,16 +85,18 @@ void setup() {
 /*******************Main Loop***************************/
 void loop() {
   if (XBee_sent == false) {
-
-    //Check if XBee is receiving data from other XBee
+    //we have not received a character yet after a certain period of time, we can see if the master has sent any characters
     if (Serial.available()) {
-      val = Serial.read();
-      counter = 0;
-      XBee_sent = true;
+      //check if slave XBee is receiving data from master XBee
+      val = Serial.read();//save whatever is in the buffer to the variable
+      counter = 0;        //set counter to 0 to prevent false button presses
+      XBee_sent = true;   //we have received a character
+      
+      //if debugging, we can see what character is recevied
       Serial.print("Character Received = ");
       Serial.println(val);
 
-      //Check to see if character sent is letter A
+      //Check to see if character sent is any of the recognized characters and jump to the sequence
       if (val == 'A') {
         Seq_0();
       }
@@ -117,10 +113,6 @@ void loop() {
         Seq_4();
       }
 
-      //else {
-      //rewrote controller code to stop constantly sending Z
-      //toggled pins outside of this nested condition statement
-      //}
     }//end buffer check
   }//end test for counter
 
@@ -140,7 +132,7 @@ void loop() {
 
 }//end loop()
 
-//**********MODULAR SEQUENCED FUNCTIONS
+//**********MODULAR SEQUENCED FUNCTIONS**********
 
 void all_ON() {
   //Bobby
