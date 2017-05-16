@@ -1,5 +1,7 @@
 /*******************************************************************
 XBee_ELSequencer_ControllerV1.ino
+Modified by Ho Yun Bobby Chan @  SparkFun Electronics May 10th, 2017
+
 Taken from SparkFun XBee EL Sequencer Controller Example
 Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
 Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
