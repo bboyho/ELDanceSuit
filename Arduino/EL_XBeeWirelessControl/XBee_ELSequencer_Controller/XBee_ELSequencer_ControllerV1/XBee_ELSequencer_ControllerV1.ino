@@ -11,7 +11,7 @@ Description:
 This is a basic test of the wireless controller to control an EL Sequencer.
 The wireless controller consists of an RedBoard Programmed with Arduino, XBee Shield,
 XBee Series 1 transceiver, and LED Push Button. The EL Sequencer
-uses an EL component, EL inverter, XBee female sockets soldered,
+uses an EL wire, 12V EL inverter, a 9V wall wart, 9V adapter, XBee female sockets soldered,
 battery, and a XBee Series 1 transceiver. An XBee Series 2
 can be used but the throughput of the Series 1 is much higher. To
 reduce latency, I recommend using the XBee Series 1. The basic
