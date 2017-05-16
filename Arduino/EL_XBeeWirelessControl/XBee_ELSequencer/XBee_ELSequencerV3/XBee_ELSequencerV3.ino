@@ -12,7 +12,7 @@ Modified by Ho Yun Bobby Chan @  SparkFun Electronics May 12th, 2017
  * The wireless controller consists of a RedBoard Programmed with Arduino,
  * XBee Explorer, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
  * Blue Clear LED, 330Ohm current limiting resistors, 3x buttons, 
- * a 9V battery, 9V adapter.
+ * a 9V battery, and a 9V adapter.
  *
  * Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
  * 12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
