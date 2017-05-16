@@ -57,7 +57,7 @@ SoftwareSerial xbee(2, 3); //Rx = 2, Tx = 3
 
 //SEND Button
 const int button1Pin = 4; //push button
-const int ledPin1 = 13;  //LED on the push button
+const int ledPin1 = 13;  //LED to indicate when a character has been sent
 
 //variables to check for button1 state
 boolean prev_button1State = false;
@@ -66,11 +66,11 @@ boolean current_button1State = false;
 char send_CHAR = 'A'; //default send character
 
 //LED Status Indicator
-int ledR = 5;//hardware PWM
-int ledG = 6;//hardware PWM
+int ledR = 5; //hardware PWM
+int ledG = 6; //hardware PWM
 int ledB = 9; //hardware PWM
 
-int pattern = 0; //pattern
+int pattern = 0; //pattern that we are going to send
 
 //UP Button
 const int button2Pin = 11; //push button to move ahead to next sequence
@@ -88,7 +88,7 @@ boolean current_button3State = false;
 
 /*******************Setup Loop***************************/
 void setup() {
-  // initialize the digital pins as an output for LEDs
+  // initialize the digital pins as an output for status
   pinMode(ledR, OUTPUT);
   pinMode(ledG, OUTPUT);
   pinMode(ledB, OUTPUT);
@@ -112,6 +112,7 @@ void setup() {
 
 /*******************Main Loop***************************/
 void loop() {
+  //initialize variables to read buttons
   int button1State;
   int button2State;
   int button3State;
@@ -124,9 +125,10 @@ void loop() {
    - HIGH or 1 means not pressed
    */
 
-  //if button is pressed, it will be pulled low
+  //-----------Check If SENT Button Has Been Pressed----------
+  //if SENT button is pressed, it will be pulled low
   if (button1State == LOW) {
-    digitalWrite(ledPin1, HIGH); //turn push button LED ON
+    digitalWrite(ledPin1, HIGH); //turn LED indicating if a character has been sent ON
     current_button1State = true; // button has been pressed once
 
     if (prev_button1State != current_button1State) //check to see if button is still being pressed
@@ -140,14 +142,15 @@ void loop() {
     prev_button1State = current_button1State;
   }
 
-  //button has not been pressed, it will be high again
+  //sent button has not been pressed, it will be high again
   else {
     current_button1State = false;
     digitalWrite(ledPin1, LOW); // turn push button LED OFF
 
     prev_button1State = current_button1State;
-  }
+  }//-----------End Check for SENT Button----------
 
+  //-----------Check If UP Button Has Been Pressed----------
   if (button2State == LOW) {
     current_button2State = true; //UP button has been pressed once
 
@@ -167,8 +170,9 @@ void loop() {
   else {
     current_button2State = false;
     prev_button2State = current_button2State;
-  }
+  }//-----------End Check for Up Button----------
 
+  //-----------Check If DOWN Button Has Been Pressed----------
   if (button3State == LOW) {
     current_button3State = true; //button has been pressed once
 
@@ -187,10 +191,11 @@ void loop() {
   else {
     current_button3State = false;
     prev_button3State = current_button3State;
-  }
+  }//-----------End Check for DOWN Button----------
 
   delay(50);
 
+  //save send character into variable depending on button press and change status LED
   switch (pattern) {
     case 1:
       greenON();
@@ -220,9 +225,10 @@ void loop() {
 }//end loop
 
 
-/*
+/*Below are the modular functions for changing the color of a RGB LED.
+ This will be used to help identify what mode we are currently in:
  ROYGBIV
- a 9V battery is not able to fully power all three LEDs simultaneously...
+ Note: A 9V battery is not able to fully power all three LEDs simultaneously...
  MODE
  1.) red              = red[HIGH]
  .) tangerine orange = red[HIGH]+ green[50]
@@ -264,9 +270,7 @@ void yellowON() {
   analogWrite(ledB, 0);
 }
 
-
-
-void clearblueON() { //MODE 4
+void clearblueON() { 
   analogWrite(ledR, 0);
   analogWrite(ledG, 255);
   analogWrite(ledB, 255);
