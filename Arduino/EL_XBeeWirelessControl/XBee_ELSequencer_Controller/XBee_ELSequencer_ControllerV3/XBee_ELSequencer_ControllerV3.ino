@@ -6,10 +6,11 @@ Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
 https://github.com/sparkfun/EL_Sequencer
 
 Description:
-This is a sketch for the EL Sequencer with a wireless controller. 
+This is a sketch for the wireless controller used to control 7x EL dance suits.
 The wireless controller consists of a RedBoard Programmed with Arduino,
 XBee Shield, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
-Blue Clear LED, 330Ohm current limiting resistors, and a button. 
+Blue Clear LED, 330Ohm current limiting resistors, a button, 9V battery,
+and a 9V adapter.
 
 Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
 12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
