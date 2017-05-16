@@ -59,26 +59,30 @@ SoftwareSerial xbee(2, 3); //Rx = 2, Tx = 3
 const int button1Pin = 4; //push button
 const int ledPin1 = 13;  //LED on the push button
 
+//variables to check for button1 state
 boolean prev_button1State = false;
 boolean current_button1State = false;
 
 char send_CHAR = 'A'; //default send character
 
 //LED Status Indicator
-int ledR = 5;//hardware PWM //pin 0 on ATtiny85
-int ledG = 6;//hardware PWM //pin 1 on ATtiny85
+int ledR = 5;//hardware PWM
+int ledG = 6;//hardware PWM
 int ledB = 9; //hardware PWM
 
 int pattern = 0; //pattern
 
 //UP Button
-const int button2Pin = 11; //push button
+const int button2Pin = 11; //push button to move ahead to next sequence
 
+//variables to check for button2 state
 boolean prev_button2State = false;
 boolean current_button2State = false;
 
 //DOWN Button
-const int button3Pin = 12;
+const int button3Pin = 12;//push button to move back a sequence
+
+//variables to check for button3 state
 boolean prev_button3State = false;
 boolean current_button3State = false;
 
@@ -145,7 +149,7 @@ void loop() {
   }
 
   if (button2State == LOW) {
-    current_button2State = true; //button has been pressed once
+    current_button2State = true; //UP button has been pressed once
 
     if (prev_button2State != current_button2State) { //check to see if button is still being pressed
       pattern = pattern + 1; //change LED pattern after button has been pressed
@@ -154,30 +158,12 @@ void loop() {
         pattern = 0;
       }
 
-      /*if(pattern == 3){
-       blinkPress = blinkPress+1;
-       if(blinkPress<0 || blinkPress>2){
-       blinkPress=0;
-       }
-       switch(blinkPress){
-       case 1:
-       blinkRate=250;
-       break;
-       case 2:
-       blinkRate=500;
-       break;
-       default:
-       blinkRate=750;
-       break;
-       }
-       }*/
-
     }
     else { //do nothing because finger is still on button
     }
     prev_button2State = current_button2State;
   }
-  //button has not been pressed, it will be high
+  //UP button has not been pressed, it will be high
   else {
     current_button2State = false;
     prev_button2State = current_button2State;
@@ -215,7 +201,7 @@ void loop() {
       send_CHAR = 'C';
       break;
     case 3:
-      allOFF();//blink
+      allOFF();//blink status LED
       delay(50);
       blueON();
       delay(50);
@@ -323,7 +309,7 @@ void sequenceTest() {
   allOFF();
   delay(50);
 
-  //whiteON();
+  //whiteON();//white drains too much power from a 9V, commenting out.
   //delay(50);
   //allOFF();
   //delay(50);
