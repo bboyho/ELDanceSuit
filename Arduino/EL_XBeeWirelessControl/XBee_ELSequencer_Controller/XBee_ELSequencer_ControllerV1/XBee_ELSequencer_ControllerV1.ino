@@ -6,7 +6,7 @@ Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
 https://github.com/sparkfun/EL_Sequencer
 
 Description:
-This is a basic test of the EL Sequencer with a wireless controller.
+This is a basic test of the wireless controller to control an EL Sequencer.
 The wireless controller consists of an Arduino Uno, XBee Shield,
 XBee Series 1 transceiver, and LED Push Button. The EL Sequencer
 uses an EL component, EL inverter, XBee female sockets soldered,
