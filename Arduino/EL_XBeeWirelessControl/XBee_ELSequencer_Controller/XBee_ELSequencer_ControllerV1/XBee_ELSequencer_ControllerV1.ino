@@ -86,6 +86,7 @@ void setup() {
 
 /*******************Main Loop***************************/
 void loop() {
+  //initialize variables to read buttons
   int button1State;
   
   button1State = digitalRead(button1Pin);
