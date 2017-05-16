@@ -22,13 +22,11 @@ point-to-multipoint configuration so that multiple EL Sequencers
 can be controlled.
 
 Connect the XBee Shield to the Arduino with the switch flipped to the
-software serial side labelled "DLINE".
+software serial side labeled "DLINE".
 
 By pushing the button, a character is sent from a remote microcontroller.
 The corresponding EL Sequencer will receive the character and control
 the EL component on a channel that is associated with that character.
-A LED push button was used but not necessary for this to operate. A
-normal momentary push button can be used.
 
 Using a RedBoard programmed with Arduino, the XBee transceiver is connected to the
 Software Serial pins. By pushing the button, the Arduino will
@@ -55,59 +53,57 @@ SoftwareSerial xbee(2, 3); //Rx = 2, Tx = 3
 
 //Declare variables and pin definitions
 
+char send_CHAR = 'A'; //default send character
+
+int pattern = 0; //pattern that we are going to send
+
 //SEND Button
 const int button1Pin = 4; //push button
 const int ledPin1 = 13;  //LED to indicate when a character has been sent
-
 //variables to check for button1 state
 boolean prev_button1State = false;
 boolean current_button1State = false;
-
-char send_CHAR = 'A'; //default send character
 
 //LED Status Indicator
 int ledR = 5; //hardware PWM
 int ledG = 6; //hardware PWM
 int ledB = 9; //hardware PWM
 
-int pattern = 0; //pattern that we are going to send
-
 //UP Button
 const int button2Pin = 11; //push button to move ahead to next sequence
-
 //variables to check for button2 state
 boolean prev_button2State = false;
 boolean current_button2State = false;
 
 //DOWN Button
 const int button3Pin = 12;//push button to move back a sequence
-
 //variables to check for button3 state
 boolean prev_button3State = false;
 boolean current_button3State = false;
 
 /*******************Setup Loop***************************/
 void setup() {
-  // initialize the digital pins as an output for status
+  //Declare buttons and status LEDs
+  
+  pinMode (ledPin1, OUTPUT); //send LED
+  pinMode(button1Pin, INPUT_PULLUP); //SEND button, use internal pullup resistor
+
+  // initialize the digital pins as an output for status LED
   pinMode(ledR, OUTPUT);
   pinMode(ledG, OUTPUT);
   pinMode(ledB, OUTPUT);
-
-  sequenceTest();//visually initialization
-
-  //Declare buttons
-  pinMode(button1Pin, INPUT_PULLUP); //use internal pullup resistor
-  pinMode (ledPin1, OUTPUT);
-
-  pinMode(button2Pin, INPUT_PULLUP); //use internal pullup resistor
-  pinMode(button3Pin, INPUT_PULLUP); //use internal pullup resistor
+  pinMode(button2Pin, INPUT_PULLUP); //UP button, use internal pullup resistor
+  pinMode(button3Pin, INPUT_PULLUP); //DOWN button, use internal pullup resistor
 
   //Declare serial connections for debugging
   Serial.begin(9600);
   Serial.println("Arduino started sending bytes via XBee");
 
+  //Declare software serial conenction with XBee
   xbee.begin(9600);
   Serial.println("EL Sequencer Controller's XBee Ready to Communicate");
+  
+  sequenceTest();//visually initialization to see that we have finished initializing
 }
 
 /*******************Main Loop***************************/
