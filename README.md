@@ -14,18 +14,15 @@ for a performance with Streetside Studio's bboys/bgirls.
 
 <table class="table table-hover table-striped table-bordered">
   <tr align="center">
-   <td><a href="https://www.instagram.com/p/BUDzvJ5Fu8r/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/e1496e55b091dd51ccbbd3539f6e24a3/5B83A2D9/t51.2885-15/e35/18512435_305927599828273_8613088069203001344_n.jpg" title="Bboys Freezed"></a></td>
+    <td><a href="https://www.instagram.com/p/BUDzBpvFZDb/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/28a5f4f04c873f485a024326433abdaa/5B7F5139/t51.2885-15/e35/18382519_315574212206941_7170378167582982144_n.jpg" title="Enclosure"></a></td>
+   <td><a href="https://www.instagram.com/p/BUDzvJ5Fu8r/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/e1496e55b091dd51ccbbd3539f6e24a3/5B83A2D9/t51.2885-15/e35/18512435_305927599828273_8613088069203001344_n.jpg" title="Performance Day" width="75%"></a></td>
+  <td><a href="https://www.instagram.com/p/BUiiFTGFC9k/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/3c4eadc3a45df3cc4a10e5ed6a22a9d6/5B9BDB78/t51.2885-15/e35/18645562_1706667162973094_4302184967066091520_n.jpg" title="Light Painting"></a></td>
   </tr>
   <tr align="center">
+    <td><a href="https://www.instagram.com/p/BUDzBpvFZDb/">Instagram: bobbybrownrice Demo Image</a></td>
     <td><a href="https://www.instagram.com/p/BUDzvJ5Fu8r/">Instagram: bobbybrownrice Demo Image</a></td>
-  </tr>
-   <tr align="center">
-   <td><a href="https://www.instagram.com/p/BUiiFTGFC9k/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/3c4eadc3a45df3cc4a10e5ed6a22a9d6/5B9BDB78/t51.2885-15/e35/18645562_1706667162973094_4302184967066091520_n.jpg" title="Bboys Freezed"></a></td>
-  </tr>
-  <tr align="center">
     <td><a href="https://www.instagram.com/p/BUiiFTGFC9k/">Instagram: bobbybrownrice Demo Image</a></td>
   </tr>
-  
 </table>
 
 Repository Contents
@@ -45,6 +42,9 @@ Documentation
   * [Test 3 - Wireless Glove Test ](https://www.instagram.com/p/BT-tP7RFKn8/)
   * [Test 4 - Wireless Glove Test Prammed to the Beat](https://www.instagram.com/p/BUDyLCmlEUp/)
   * [Enclosure](https://www.instagram.com/p/BUDzBpvFZDb/)
+  * [Performance Day](https://www.instagram.com/p/BUDzvJ5Fu8r/)
+  * [Light Painting](https://www.instagram.com/p/BUiiFTGFC9k/)
+  * [Demo Video](https://www.instagram.com/p/BUD_RaelsrU/)
 
 License Information
 -------------------
