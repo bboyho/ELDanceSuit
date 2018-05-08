@@ -1,7 +1,8 @@
-# EL Dance Suit
+Wireless Controlled EL Dance Suits
+-------------------
 
 This code will be used to wirelessly control 2x 3 meters of EL Wire attached to a dancer's hoodie and pants
-for a performance with Streetside Studio's bboys/bgirls.
+for a performance with Streetside Studio's bboys/bgirls. In less than 3 months with my usual day job, teaching, and training. 42 meters (~1,653.5 inches) of manual hand sewing white EL wire to hoodies and pants, custom connectors, soldering, a little coding with Arduino, 8x XBees configured as point-to-multipoint network, 7x enclosures attached to everyone's hip, straps, a wireless glove, choreographing, and editing parts of a track together.
 
 <table class="table table-hover table-striped table-bordered">
   <tr align="center">
