@@ -47,6 +47,22 @@ Documentation
   * [Light Painting](https://www.instagram.com/p/BUiiFTGFC9k/)
   * [Demo Video](https://www.instagram.com/p/BUD_RaelsrU/)
 
+XBee Point to Multipoint Configuration
+-------------------
+
+* Master
+  * CH = C
+  * ID = 3333
+  * DH = 0
+  * DL = FFFF (2)
+  * MY = 1 
+*  Slave
+  * CH = C
+  * ID = 3333
+  * DH = 0
+  * DL = 1 <- point to Master "MY"
+  * MY = 2 <- Slave "MY", make it unique in the network.
+
 License Information
 -------------------
 
