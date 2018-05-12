@@ -47,8 +47,10 @@ Documentation
   * [Light Painting](https://www.instagram.com/p/BUiiFTGFC9k/)
   * [Demo Video](https://www.instagram.com/p/BUD_RaelsrU/)
 
-XBee Point to Multipoint Configuration
+XBee Series 1, Pro:  Point to Multipoint Configuration
 -------------------
+
+[Digi Tutorial: XBee 802.15.4 (i.e. Wireless Serial)](http://examples.digi.com/get-started/basic-xbee-802-15-4-chat/ )
 
 * Master
   * CH = C
