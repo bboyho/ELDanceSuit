@@ -52,13 +52,14 @@ XBee Series 1, Pro:  Point to Multipoint Configuration
 
 [Digi Tutorial: XBee 802.15.4 (i.e. Wireless Serial)](http://examples.digi.com/get-started/basic-xbee-802-15-4-chat/ )
 
-* Master
+* Master XBee
   * CH = C
   * ID = 3333
   * DH = 0
   * DL = FFFF (2)
-  * MY = 1 
-*  Slave
+  * MY = 1
+
+* Slave XBee
   * CH = C
   * ID = 3333
   * DH = 0
