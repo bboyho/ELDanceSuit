@@ -35,8 +35,11 @@ Repository Contents
 Documentation
 -------------------
 
+* [Exploring XBees and XCTU](https://learn.sparkfun.com/tutorials/exploring-xbees-and-xctu)
 * [SparkFun EL Sequencer Hookup Guide](https://learn.sparkfun.com/tutorials/el-sequencerescudo-dos-hookup-guide)
-* [GitHub Repository for EL Sequencer](https://github.com/sparkfun/EL_Sequencer/tree/master)
+  * [GitHub Repository for EL Sequencer](https://github.com/sparkfun/EL_Sequencer/tree/master)
+* [EL Hoodie](https://learn.sparkfun.com/tutorials/el-wire-hoodie)
+* [How to Make a Custom EL Wire Extension Cable](https://learn.sparkfun.com/tutorials/how-to-make-a-custom-el-wire-extension-cable)
 * Instagram: bobbybrownrice
   * [Test 1 - Wireless Test](https://www.instagram.com/p/BT502rzF0ND/)
   * [Test 2 - Wireless Test in the Dark](https://www.instagram.com/p/BT51mbBFOCs/)
