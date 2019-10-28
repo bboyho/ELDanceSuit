@@ -1,49 +1,49 @@
 /**********************************************************************
-XBee_ELSequencerV3.ino
-Modified by Ho Yun Bobby Chan @  SparkFun Electronics May 12th, 2017
+  XBee_ELSequencerV3.ino
+  Modified by Ho Yun Bobby Chan @  SparkFun Electronics May 12th, 2017
 
- * Taken from the SparkFun XBee EL Sequencer Demo Sketch
- * Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
- * Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
- * https://github.com/sparkfun/EL_Sequencer
- *
- * Description:
- * This is a modified sketch for the EL Sequencer with a wireless controller.
- * The wireless controller consists of a RedBoard Programmed with Arduino,
- * XBee Explorer, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
- * Blue Clear LED, 330Ohm current limiting resistors, 3x buttons, 
- * a 9V battery, and a 9V adapter.
- *
- * Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
- * 12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
- * and a XBee Series 1 transceiver.  An XBee Series 2 can be used but the throughput
- * of the Series 1 is much higher. To reduce latency, I recommend using the XBee
- * Series 1. The basic configuration of the XBee module with point-to-point configuratin is
- * based on Digi's Example tutorial => https://www.digi.com/blog/xbee/basic-xbee-802-15-4-chat/.
- * Page 5 of the tutorial shows you how to broadcast with
- * point-to-multipoint configuration so that multiple EL Sequencers
- * can be controlled.
- *
- * By pushing the button, a character is sent from a remote microcontroller.
- * The corresponding EL Sequencer will receive the character and control
- * the EL component on a channel that is associated with that character.
- *
- * EL Sequencer uses the hardware UART of the Atmega328 for communication:
- * pin 0 = Rx
- * pin 1 = Tx
- *
- * Note: Make sure to remove the XBee Series 1 on the EL Sequencer when
- * uploading a new sketch file otherwise it will brick the XBee. You can
- * always use the next generation XCTU software to unbrick and recover
- * the transceiver.
- *
- * Development environment specifics:
- * Arduino 1.6.5
- *
- * This code is beerware; if you see me (or any other SparkFun employee) at the local,
- * and you've found our code helpful, please buy us a round!
- * Distributed as-is; no warranty is given.
- *
+   Taken from the SparkFun XBee EL Sequencer Demo Sketch
+   Ho Yun Bobby Chan @ SparkFun Electronics June 20, 2014
+   Updated by Toni Klopfenstein @ SparkFun Electronics April, 2015
+   https://github.com/sparkfun/EL_Sequencer
+
+   Description:
+   This is a modified sketch for the EL Sequencer with a wireless controller.
+   The wireless controller consists of a RedBoard Programmed with Arduino,
+   XBee Explorer, XBee Series 1 transceiver, diffused RGB Common Cathode LED,
+   Blue Clear LED, 330Ohm current limiting resistors, 3x buttons,
+   a 9V battery, and a 9V adapter.
+
+   Each of the 7x EL dance suits contain an EL Sequencer, 2x EL Wires, a
+   12V EL inverter, XBee female sockets soldered, a 9V battery, 9V adapter,
+   and a XBee Series 1 transceiver.  An XBee Series 2 can be used but the throughput
+   of the Series 1 is much higher. To reduce latency, I recommend using the XBee
+   Series 1. The basic configuration of the XBee module with point-to-point configuratin is
+   based on Digi's Example tutorial => https://www.digi.com/blog/xbee/basic-xbee-802-15-4-chat/.
+   Page 5 of the tutorial shows you how to broadcast with
+   point-to-multipoint configuration so that multiple EL Sequencers
+   can be controlled.
+
+   By pushing the button, a character is sent from a remote microcontroller.
+   The corresponding EL Sequencer will receive the character and control
+   the EL component on a channel that is associated with that character.
+
+   EL Sequencer uses the hardware UART of the Atmega328 for communication:
+   pin 0 = Rx
+   pin 1 = Tx
+
+   Note: Make sure to remove the XBee Series 1 on the EL Sequencer when
+   uploading a new sketch file otherwise it will brick the XBee. You can
+   always use the next generation XCTU software to unbrick and recover
+   the transceiver.
+
+   Development environment specifics:
+   Arduino 1.6.5
+
+   This code is beerware; if you see me (or any other SparkFun employee) at the local,
+   and you've found our code helpful, please buy us a round!
+   Distributed as-is; no warranty is given.
+
  ***********************************************************************/
 
 char val; //Declare character 'val' when Slave XBee receives a character
@@ -175,120 +175,73 @@ void all_OFF() {
 }
 
 void Seq_0() {
-  //function used to flash Bobby's suit with the beat at 5 seconds into the edited C2C track
-
-  digitalWrite(status_LED, LOW); //turn OFF Status LED
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(500);
-
-  digitalWrite(status_LED, HIGH); //turn on Status LED
-
-  digitalWrite(2, HIGH); //Channel A
-  delay(500);
-  digitalWrite(3, HIGH); //Channel B
-  delay(500);
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(500);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-
-  delay(500);
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(250);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-
-  delay(500);
-
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(500);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-
-  delay(250);
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(250);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-  delay(250);
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(250);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-  delay(250);
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(250);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-  delay(250);
-  digitalWrite(2, LOW); //Channel A
-  digitalWrite(3, LOW); //Channel B
-  delay(250);
-  digitalWrite(2, HIGH); //Channel A
-  digitalWrite(3, HIGH); //Channel B
-
-  all_ON();//turn everything back on
+  //this function turns everything off
+  all_OFF();
 }
 
 void Seq_1() {
-  //function used to toggle the channels back & forth and hit the beat at 45 seconds into the edited C2C track
-
-  for (int i = 0; i < 8; ++i) {
-    //Bobby
-    digitalWrite(2, HIGH); //Channel A, hoodie
-    digitalWrite(3, LOW); //Channel B, pants
-    //Antuan, Kaden
-    digitalWrite(4, HIGH); //Channel C, hoodie
-    digitalWrite(5, LOW); //Channel D, pants
-    //Mireku, Talon
-    digitalWrite(6, LOW); //Channel E, hoodie
-    digitalWrite(7, HIGH); //Channel F, pants
-    //Madi, Henry
-    digitalWrite(8, LOW); //Channel G, hoodie
-    digitalWrite(9, HIGH); //Channel H, pants
-    delay(250);
-
-    //Bobby
-    digitalWrite(2, LOW); //Channel A, hoodie
-    digitalWrite(3, HIGH); //Channel B, pants
-    //Antuan, Kaden
-    digitalWrite(4, LOW); //Channel C, hoodie
-    digitalWrite(5, HIGH); //Channel D, pants
-    //Mireku, Talon
-    digitalWrite(6, HIGH); //Channel E, hoodie
-    digitalWrite(7, LOW); //Channel F, pants
-    //Madi, Henry
-    digitalWrite(8, HIGH); //Channel G, hoodie
-    digitalWrite(9, LOW); //Channel H, pants
-    delay(250);
-  }
-
-  all_ON();
-  delay(750);
-  all_OFF();
-  delay(100);
+  //this function turns everything back on
   all_ON();
 
 }
 
 void Seq_2() {
-  //this function turns all the channels ON just in case something happens
+  //this function blinks off then back on
 
+  all_OFF();
+  delay(100);
   all_ON();
 }
 
 void Seq_3() {
-  //function used to as a ripple effect and turn on the channels to the beat scratch at 2 minutes 10 seconds into the edited C2C track
-
+  //function used to alternate between the hoodie and pants before turning back on
+  //this really depends on how the EL is sewn on
   all_OFF();
+
   delay(100);
+
+  //Madi, Henry
+  digitalWrite(8, HIGH); //Channel G, hoodie
+  digitalWrite(9, LOW); //Channel H, pants
+  //Antuan, Kaden
+  digitalWrite(4, HIGH); //Channel C, hoodie
+  digitalWrite(5, LOW); //Channel D, pants
+  //Bobby
+  digitalWrite(2, HIGH); //Channel A, hoodie
+  digitalWrite(3, LOW); //Channel B, pants
+  //Mireku, Talon
+  digitalWrite(6, HIGH); //Channel E, hoodie
+  digitalWrite(7, LOW); //Channel F, pants
+
+  delay(300);
+
+  //Madi, Henry
+  digitalWrite(8, LOW); //Channel G, hoodie
+  digitalWrite(9, HIGH); //Channel H, pants
+  //Antuan, Kaden
+  digitalWrite(4, LOW); //Channel C, hoodie
+  digitalWrite(5, HIGH); //Channel D, pants
+  //Bobby
+  digitalWrite(2, LOW); //Channel A, hoodie
+  digitalWrite(3, HIGH); //Channel B, pants
+  //Mireku, Talon
+  digitalWrite(6, LOW); //Channel E, hoodie
+  digitalWrite(7, HIGH); //Channel F, pants
+
+  delay(300);
+
+  all_ON();// this line can be commented out to continue alternating using by adding "//"
+
+  delay(100);
+}
+
+void Seq_4() {
+  //function used to as a ripple effect similar to a jar filling with water
+  //this really depends on how the EL is sewn on and where the dancer is located for this effect
+  all_OFF();
+  
+  delay(100);
+  
   //Madi, Henry
   digitalWrite(8, HIGH); //Channel G, hoodie
   digitalWrite(9, LOW); //Channel H, pants
@@ -300,7 +253,7 @@ void Seq_3() {
   //Bobby
   digitalWrite(2, HIGH); //Channel A, hoodie
   digitalWrite(3, LOW); //Channel B, pants
-
+  delay(100);
   //Mireku, Talon
   digitalWrite(6, HIGH); //Channel E, hoodie
   digitalWrite(7, LOW); //Channel F, pants
@@ -317,16 +270,9 @@ void Seq_3() {
   //Bobby
   digitalWrite(2, HIGH); //Channel A, hoodie
   digitalWrite(3, HIGH); //Channel B, pants
-
+  delay(100);
   //Mireku, Talon
   digitalWrite(6, HIGH); //Channel E, hoodie
   digitalWrite(7, HIGH); //Channel F, pants
   delay(100);
-
-}
-
-void Seq_4() {
-  //this function turns all the channels ON just in case something happens
-
-  all_ON();
 }
