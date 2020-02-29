@@ -9,8 +9,8 @@ for a performance with Streetside Studio's bboys/bgirls. In less than 3 months w
     <td colspan="3"><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/7/7/2/Wireless_Controlled_Wearable_EL_Wire_Dance_Suit_Ripple.gif" title="Wireless EL Dance Suit Demo"></a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/securing-the-electronics"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/7/7/2/Cardboard_Enclosures_Wireless_Controlled_EL_Sequencers.jpg" title="Enclosure"></a></td>
-   <td><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/stress-testing-in-the-field"><img src="https://cdn.sparkfun.com/assets/home_page_posts/2/9/1/0/Dancers_EL-Wire_Suits.jpg" title="Performance Day"></a></td>
+    <td><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/securing-the-electronics"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/7/7/2/Cardboard_Enclosures_Wireless_Controlled_EL_Sequencers.jpg" title="Enclosure" width="85%"></a></td>
+   <td><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/stress-testing-in-the-field"><img src="https://cdn.sparkfun.com/assets/home_page_posts/2/9/1/0/Dancers_EL-Wire_Suits.jpg" title="Performance Day" width="85%"></a></td>
   <td><a href="https://www.sparkfun.com/news/3181"><img src="https://cdn.sparkfun.com/assets/home_page_posts/3/1/8/1/Light_Painting_EL_LED_4222.jpg" title="Light Painting"></a></td>
   </tr>
 </table>
