@@ -47,8 +47,8 @@ Documentation
   * [Test 4 - Wireless Glove Test Prammed to the Beat](https://www.instagram.com/p/BUDyLCmlEUp/)
   * [Enclosure](https://www.instagram.com/p/BUDzBpvFZDb/)
   * [Performance Day](https://www.instagram.com/p/BUDzvJ5Fu8r/)
-  * [Light Painting](https://www.instagram.com/p/BUiiFTGFC9k/)
   * [Demo Video](https://www.instagram.com/p/BUD_RaelsrU/)
+  * [Light Painting](https://www.instagram.com/p/BUiiFTGFC9k/)
 
 XBee Series 1, Pro:  Point to Multipoint Configuration
 -------------------
