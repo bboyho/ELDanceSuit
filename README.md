@@ -6,23 +6,12 @@ for a performance with Streetside Studio's bboys/bgirls. In less than 3 months w
 
 <table class="table table-hover table-striped table-bordered">
   <tr align="center">
-    <td><a href="https://www.instagram.com/p/BUD_RaelsrU/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/cde7f502083572fb79a0f58e41017548/5AF32FBC/t51.2885-15/e15/18443739_1350679458342870_2834682031722463232_n.jpg" title="Bboys w/ Wireless EL Dance Suit"></a></td>
+    <td colspan="3"><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/7/7/2/Wireless_Controlled_Wearable_EL_Wire_Dance_Suit_Ripple.gif" title="Wireless EL Dance Suit Demo"></a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://www.instagram.com/p/BUD_RaelsrU/">Instagram: bobbybrownrice Demo Video</a></td>
-  </tr>
-</table>
-
-<table class="table table-hover table-striped table-bordered">
-  <tr align="center">
-    <td><a href="https://www.instagram.com/p/BUDzBpvFZDb/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/28a5f4f04c873f485a024326433abdaa/5B7F5139/t51.2885-15/e35/18382519_315574212206941_7170378167582982144_n.jpg" title="Enclosure"></a></td>
-   <td><a href="https://www.instagram.com/p/BUDzvJ5Fu8r/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/e1496e55b091dd51ccbbd3539f6e24a3/5B83A2D9/t51.2885-15/e35/18512435_305927599828273_8613088069203001344_n.jpg" title="Performance Day" width="75%"></a></td>
-  <td><a href="https://www.instagram.com/p/BUiiFTGFC9k/"><img src="https://scontent-dfw5-1.cdninstagram.com/vp/3c4eadc3a45df3cc4a10e5ed6a22a9d6/5B9BDB78/t51.2885-15/e35/18645562_1706667162973094_4302184967066091520_n.jpg" title="Light Painting"></a></td>
-  </tr>
-  <tr align="center">
-    <td><a href="https://www.instagram.com/p/BUDzBpvFZDb/">Instagram: bobbybrownrice Demo Image</a></td>
-    <td><a href="https://www.instagram.com/p/BUDzvJ5Fu8r/">Instagram: bobbybrownrice Demo Image</a></td>
-    <td><a href="https://www.instagram.com/p/BUiiFTGFC9k/">Instagram: bobbybrownrice Demo Image</a></td>
+    <td><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/securing-the-electronics"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/7/7/2/Cardboard_Enclosures_Wireless_Controlled_EL_Sequencers.jpg" title="Enclosure"></a></td>
+   <td><a href="https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/stress-testing-in-the-field"><img src="https://cdn.sparkfun.com/assets/home_page_posts/2/9/1/0/Dancers_EL-Wire_Suits.jpg" title="Performance Day"></a></td>
+  <td><a href="https://www.sparkfun.com/news/3181"><img src="https://cdn.sparkfun.com/assets/home_page_posts/3/1/8/1/Light_Painting_EL_LED_4222.jpg" title="Light Painting"></a></td>
   </tr>
 </table>
 
@@ -35,15 +24,23 @@ Repository Contents
 Documentation
 -------------------
 
-* [Exploring XBees and XCTU](https://learn.sparkfun.com/tutorials/exploring-xbees-and-xctu)
-* [SparkFun EL Sequencer Hookup Guide](https://learn.sparkfun.com/tutorials/el-sequencerescudo-dos-hookup-guide)
-  * [GitHub Repository for EL Sequencer](https://github.com/sparkfun/EL_Sequencer/tree/master)
-* [EL Wire Hoodie](https://learn.sparkfun.com/tutorials/el-wire-hoodie)
-* [EL Wire Pants](https://learn.sparkfun.com/tutorials/el-wire-pants)
-* [Wireless Glove Controller](https://learn.sparkfun.com/tutorials/wireless-glove-controller)
-* [Modifying Your EL Wire Inverter](https://learn.sparkfun.com/tutorials/modifying-your-el-wire-inverter)
-* [How to Make a Custom EL Wire Extension Cable](https://learn.sparkfun.com/tutorials/how-to-make-a-custom-el-wire-extension-cable)
-* Instagram: bobbybrownrice
+* Tutorials
+  * [Exploring XBees and XCTU](https://learn.sparkfun.com/tutorials/exploring-xbees-and-xctu)
+  * [SparkFun EL Sequencer Hookup Guide](https://learn.sparkfun.com/tutorials/el-sequencerescudo-dos-hookup-guide)
+    * [GitHub Repository for EL Sequencer](https://github.com/sparkfun/EL_Sequencer/tree/master)
+  * [Wireless Controlled Wearable EL Wire Dance Suit
+](https://learn.sparkfun.com/tutorials/wireless-controlled-wearable-el-wire-dance-suit/)
+    * [EL Wire Hoodie](https://learn.sparkfun.com/tutorials/el-wire-hoodie)
+    * [EL Wire Pants](https://learn.sparkfun.com/tutorials/el-wire-pants)
+    * [Wireless Glove Controller](https://learn.sparkfun.com/tutorials/wireless-glove-controller)
+    * [Modifying Your EL Wire Inverter](https://learn.sparkfun.com/tutorials/modifying-your-el-wire-inverter)
+    * [How to Make a Custom EL Wire Extension Cable](https://learn.sparkfun.com/tutorials/how-to-make-a-custom-el-wire-extension-cable)
+* SparkFun Blog
+  * [Enginursday: Building a Wireless EL Wire Dance Suit, Part 1](https://www.sparkfun.com/news/2910)
+  * [Enginursday: Building a Wireless EL Wire Dance Suit, Part 2](https://www.sparkfun.com/news/2963)
+  * [Enginursday: Building a Wireless EL Wire Dance Suit, Part 3](https://www.sparkfun.com/news/3115)
+  * [Enginursday: Light Painting with EL Wire and an LED](https://www.sparkfun.com/news/3181)
+* Instagram: bobbybrownrice - Demos and Project Images
   * [Test 1 - Wireless Test](https://www.instagram.com/p/BT502rzF0ND/)
   * [Test 2 - Wireless Test in the Dark](https://www.instagram.com/p/BT51mbBFOCs/)
   * [Test 3 - Wireless Glove Test ](https://www.instagram.com/p/BT-tP7RFKn8/)
